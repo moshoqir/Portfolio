@@ -1,0 +1,637 @@
+html {
+  scroll-padding-top: 130px; /* Adjust based on your navbar's height */
+  scroll-behavior: smooth; /* Optional: Adds smooth scrolling */
+}
+
+/* Animated Gradient Background */
+body {
+    background: linear-gradient(-45deg, #007bff, #6c757d, #0056b3, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+
+   
+  }
+
+  body * {
+
+    color: white;
+
+  }
+  
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  hr{
+    color: white !important;
+  }
+  
+
+.navbar {
+  position: fixed !important; /* Override Bootstrap's default styles */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  margin: 0 10px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar img {
+  width: 65px;
+}
+
+#mainPic {
+  display: flex;
+  margin-top: 155px;
+  font-family: "Chakra Petch", serif;
+}
+
+#mainPic * {
+  font-family: "Chakra Petch", serif;
+}
+
+.imgBg {
+  background-color: #cdcdcd;
+  position: relative;
+  transform: rotate(-17deg);
+}
+
+.profilePic {
+  width: 180px;
+
+  transform: rotate(20deg);
+}
+
+
+.myName {
+    font-size: 3rem;
+    font-family: "Chakra Petch", serif;
+    white-space: nowrap;   
+    overflow: hidden;      
+    border-right: 2px solid #007bff; /* Simulate a typing cursor */
+    position: absolute;
+  top: 115px;
+  right: 415px;              /* Start with no visible text */
+    animation: typing 4s steps(30, end) , blink 0.5s step-end infinite;
+    
+  }
+
+  
+  
+  /* Typing animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 40%; 
+    }
+  }
+  
+  /* Blinking cursor animation */
+  @keyframes blink {
+    50% {
+      border-right-color: transparent; /* Hide the cursor every other frame */
+    }
+  }
+  
+  
+
+.port {
+  position: absolute;
+  top: 77%;
+  left: 50%;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transform: translate(-50%, -50%);
+  font-family: "Chakra Petch", serif;
+}
+
+.position {
+  position: absolute;
+
+  bottom: 85px;
+  right: 44%;
+}
+
+.hr1 {
+  margin-top: 95px;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  font-family: "Chakra Petch", serif;
+}
+
+#about div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Chakra Petch", serif;
+}
+
+#about .firstHalf {
+  width: 100%;
+  height: 50%;
+}
+
+#experience {
+  display: flex;
+  flex-direction: column;
+  font-family: "Chakra Petch", serif;
+}
+
+#experience .txtXp {
+  display: flex;
+  justify-content: space-around;
+
+  align-items: center;
+  font-family: "Chakra Petch", serif;
+}
+
+#experience .firstHalfEx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+  justify-content: space-evenly;
+}
+
+.xp1,
+.xp2 {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.xp1 p,.xp2 p{
+    color: black;
+}
+
+.xp1Info strong,
+.xp2Info strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.xp1Info p,
+.xp2Info p {
+  font-size: 1rem;
+  color: #333 ;
+  margin-top: 10px;
+}
+
+.xp1Info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.xp2Info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#skills {
+  display: flex;
+  font-family: "Chakra Petch", serif;
+}
+
+.skillsSec div {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#skills .skillsFirst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.skillsSec {
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: end;
+  align-items: center;
+  gap: 18px;
+}
+
+.skillsSec h4 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.skillsSec p {
+  font-size: 1rem;
+  color: #555;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Chakra Petch", serif;
+  justify-content: space-around;
+}
+
+.project1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 30px;
+  position: relative;
+}
+.project1 img {
+  width: 190px;
+}
+
+.projectsDiv {
+  display: flex;
+  gap: 45px;
+}
+
+.projectsDiv a {
+  text-decoration: none;
+  color: black;
+}
+.projectsDiv div:hover {
+  transition: background-color 1s, color 1s;
+
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 3);
+
+  color: rgb(72, 72, 162);
+
+  background-color: #474e93;
+  color: white;
+  border: 3px solid #7e5cad;
+}
+
+.projectsDiv div:hover a {
+  transition: background-color 1s, color 1s;
+
+  color: rgb(72, 72, 162);
+
+  background-color: #474e93;
+  color: white;
+}
+
+.project2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.project2 img {
+  width: 182px;
+}
+
+.project3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 10px;
+  position: relative;
+}
+
+.project3 img {
+  width: 165px;
+}
+
+.project4{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  position: relative;
+  bottom: 65px;
+
+
+}
+
+.project4 img {
+    width: 165px;
+  }
+
+#contact {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  font-family: "Chakra Petch", serif;
+}
+
+/* .textContact{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+} */
+
+.txt1Contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.txt2Contact {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 15px;
+}
+
+.txt2Contact a {
+  text-decoration: none;
+  color: black;
+}
+.txt2Contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 575.98px) {
+  body p {
+    font-size: x-small !important;
+  }
+
+  .myName {
+    font-size: 6vw;
+    position: absolute;
+    top: 110px;
+    right: 60px;
+    font-family: "Chakra Petch", serif;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%; /* Adjust to fit the length of your text (20ch = 20 characters) */
+    }
+  }
+
+  
+
+  
+
+  .port {
+    position: absolute;
+    top: 80%;
+  }
+
+  .position {
+    position: absolute;
+    bottom: 68px;
+    right: 38%;
+  }
+
+  #about img {
+    width: 120px;
+  }
+
+  #about p {
+    left: 3%;
+    position: relative;
+  }
+
+  .txtXp {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .firstHalfEx {
+    gap: 12%;
+    justify-content: flex-start !important;
+
+  }
+  .xp1 {
+    left: 11%;
+    position: relative;
+  }
+
+  #skills {
+    display: flex;
+    font-family: "Chakra Petch", serif;
+    flex-direction: column;
+  }
+
+  .skillsFirst {
+    left: 20%;
+    position: relative;
+    margin-top: 0 !important;
+  }
+
+  .skillsSec {
+    grid-template-columns: repeat(2, 140px);
+    grid-template-rows: repeat(2, 180px);
+    justify-items: center;
+    justify-content: space-around;
+  }
+
+  .skillsSec * {
+    font-size: smaller;
+  }
+
+  .projectsDiv {
+    flex-direction: column;
+  }
+
+  .project2{
+    margin-top: 0;
+  }
+
+  .project3 {
+    bottom: 26px;
+  }
+
+  .project4{
+    bottom: 25px;
+
+  }
+
+  #contact {
+    grid-template-columns: 1fr;
+  }
+
+  #contact img {
+    width: 400px;
+  }
+
+  .txt1Contact {
+    flex-direction: column;
+  }
+
+  .txt2Contact {
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 576px) and (max-width:750px) {
+  body p {
+    font-size: x-small !important;
+  }
+
+  .myName {
+    font-size: 6vw;
+    position: absolute;
+    top: 110px;
+    right: 95px;
+    font-family: "Chakra Petch", serif;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%; /* Adjust to fit the length of your text (20ch = 20 characters) */
+    }
+  }
+
+  
+
+  
+
+  .position {
+    bottom: 70px;
+    right: 43%;
+  }
+
+  .port {
+    top: 80%;
+  }
+
+  .firstHalfEx {
+    justify-content: space-evenly;
+  }
+
+  .skillsFirst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+  }
+
+  .skillsSec {
+    display: grid
+;
+    grid-template-columns: repeat(2, 43%);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: end;
+    align-items: center;
+    gap: 18px;
+    left: 2%;
+    position: relative;
+    justify-items: center;
+
+}
+
+  .projectsDiv {
+    flex-direction: column;
+  }
+
+  .project1P{
+    bottom: 20px;
+
+  }
+
+  .project2{
+    margin-top: 0;
+  }
+
+  .project3 {
+    bottom: 26px;
+  }
+
+  .project4{
+    bottom: 30px;
+
+  }
+
+  #contact img{
+    width: 320px;
+    left: 15%;
+    position: relative;
+    top: 20%;
+
+
+  }
+}
+
+@media (min-width :752px) and (max-width:1110px)  {
+    
+    .myName {
+        font-size: 6vw;
+        position: absolute;
+        top: 110px;
+        right: 95px;
+        font-family: "Chakra Petch", serif;
+      }
+
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 70%; /* Adjust to fit the length of your text (20ch = 20 characters) */
+        }
+      }
+    
+    
+
+    #contact img{
+        width: 410px;
+        left: 12%;
+        position: relative;
+        top: 20%;
+    
+    
+      }
+
+      .projectsDiv{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+        align-items: end;
+
+
+      }
+
+      .projectsDiv div{
+        bottom: 0px;
+    position: relative;
+      }
+}
