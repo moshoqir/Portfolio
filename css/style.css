@@ -5,35 +5,31 @@ html {
 
 /* Animated Gradient Background */
 body {
-    background: linear-gradient(-45deg, #007bff, #6c757d, #0056b3, #ffffff);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
+  background: linear-gradient(-45deg, #007bff, #6c757d, #0056b3, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  overflow-x: hidden;
+}
 
-   
+body * {
+  color: white;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
   }
-
-  body * {
-
-    color: white;
-
+  50% {
+    background-position: 100% 50%;
   }
-  
-  @keyframes gradientBG {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+  100% {
+    background-position: 0% 50%;
   }
+}
 
-  hr{
-    color: white !important;
-  }
-  
+hr {
+  color: white !important;
+}
 
 .navbar {
   position: fixed !important; /* Override Bootstrap's default styles */
@@ -41,7 +37,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .navbar-nav .nav-link {
@@ -59,67 +55,69 @@ body {
   width: 65px;
 }
 
-#mainPic {
+/* #mainPic {
   display: flex;
   margin-top: 155px;
   font-family: "Chakra Petch", serif;
+} */
+
+#mainPic{
+  margin-bottom: -140px;
+
 }
 
 #mainPic * {
   font-family: "Chakra Petch", serif;
-}
 
-.imgBg {
-  background-color: #cdcdcd;
-  position: relative;
-  transform: rotate(-17deg);
 }
 
 .profilePic {
-  width: 180px;
-
-  transform: rotate(20deg);
+  width: 200px;
+  /* right: 275px; */
+  margin-top: 63px;
+  margin-left: 1px;
 }
 
-
 .myName {
-    font-size: 3rem;
-    font-family: "Chakra Petch", serif;
-    white-space: nowrap;   
-    overflow: hidden;      
-    border-right: 2px solid #007bff; /* Simulate a typing cursor */
-    position: absolute;
-  top: 115px;
-  right: 415px;              /* Start with no visible text */
-    animation: typing 4s steps(30, end) , blink 0.5s step-end infinite;
-    
-  }
+  font-size: 3rem;
+  font-family: "Chakra Petch", serif;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #007bff; /* Simulate a typing cursor */
+  position: absolute;
+  top: 80px;
+  right: 415px; /* Start with no visible text */
+  animation: typing 4s steps(30, end), blink 0.5s step-end infinite;
+}
 
-  
-  
-  /* Typing animation */
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 40%; 
-    }
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  /* Blinking cursor animation */
-  @keyframes blink {
-    50% {
-      border-right-color: transparent; /* Hide the cursor every other frame */
-    }
+  to {
+    width: 37%;
   }
-  
-  
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  50% {
+    border-right-color: transparent; /* Hide the cursor every other frame */
+  }
+}
+
+.pDisc {
+  font-size: larger;
+  left: 320px;
+  position: relative;
+  bottom: 240px;
+}
 
 .port {
   position: absolute;
-  top: 77%;
-  left: 50%;
+  top: 70%;
+  left: 8%;
   font-size: 2.5rem;
   font-weight: 300;
   letter-spacing: 1px;
@@ -130,8 +128,8 @@ body {
 .position {
   position: absolute;
 
-  bottom: 85px;
-  right: 44%;
+  bottom: 120px;
+  right: 87%;
 }
 
 .hr1 {
@@ -174,7 +172,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+
   justify-content: space-evenly;
 }
 
@@ -185,11 +183,14 @@ body {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+  width: 260px;
+    height: 205px;
+
 }
 
-.xp1 p,.xp2 p{
-    color: black;
+.xp1 p,
+.xp2 p {
+  color: black;
 }
 
 .xp1Info strong,
@@ -202,7 +203,7 @@ body {
 .xp1Info p,
 .xp2Info p {
   font-size: 1rem;
-  color: #333 ;
+  color: #333;
   margin-top: 10px;
 }
 
@@ -239,13 +240,18 @@ body {
   width: 50%;
 }
 
+.skill1, .skill2, .skill3, .skill4{
+  width: 250px;
+  height: 210px;
+}
+
 .skillsSec {
   display: grid;
   grid-template-columns: repeat(2, 45%);
   grid-template-rows: repeat(2, 1fr);
   align-items: end;
   align-items: center;
-  gap: 18px;
+  gap: 22px;
 }
 
 .skillsSec h4 {
@@ -270,7 +276,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  bottom: 30px;
+  
   position: relative;
 }
 .project1 img {
@@ -278,7 +284,8 @@ body {
 }
 
 .projectsDiv {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
   gap: 45px;
 }
 
@@ -312,7 +319,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  top: 11%;
+  position: relative;
+  
 }
 
 .project2 img {
@@ -323,33 +332,42 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  bottom: 10px;
+ bottom: 20px;
+
   position: relative;
 }
 
 .project3 img {
-  width: 165px;
+  width: 120px;
+
 }
 
-.project4{
-    display: flex;
+.project4 {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  
+
+  bottom: 20%;
   position: relative;
-  bottom: 65px;
-
-
+  
 }
 
 .project4 img {
-    width: 165px;
-  }
+  width: 140px;
+}
 
 #contact {
   display: grid;
   grid-template-columns: 40% 60%;
   font-family: "Chakra Petch", serif;
+}
+
+#contact a{
+  color: white;
+}
+
+#contact i{
+  background-color: white;
 }
 
 /* .textContact{
@@ -366,7 +384,7 @@ body {
 .txt2Contact {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 70px;
   gap: 15px;
 }
 
@@ -386,29 +404,32 @@ body {
   }
 
   .myName {
-    font-size: 6vw;
+    font-size: 4vw;
     position: absolute;
-    top: 110px;
-    right: 60px;
+    top: 65px;
+    right: 0px;
     font-family: "Chakra Petch", serif;
-  }
+}
+
+.pDisc{
+  font-size: xx-small !important;
+  left: 210px;
+  position: relative;
+  bottom: 300px;
+}
 
   @keyframes typing {
     from {
       width: 0;
     }
     to {
-      width: 70%; /* Adjust to fit the length of your text (20ch = 20 characters) */
+      width: 40%; /* Adjust to fit the length of your text (20ch = 20 characters) */
     }
   }
 
-  
-
-  
-
   .port {
     position: absolute;
-    top: 80%;
+    right: 77%;
   }
 
   .position {
@@ -434,7 +455,8 @@ body {
   .firstHalfEx {
     gap: 12%;
     justify-content: flex-start !important;
-
+    position: relative;
+    right: 4%;
   }
   .xp1 {
     left: 11%;
@@ -447,6 +469,11 @@ body {
     flex-direction: column;
   }
 
+  #skills h2{
+    margin-top: 0 !important;
+    
+  }
+
   .skillsFirst {
     left: 20%;
     position: relative;
@@ -454,10 +481,17 @@ body {
   }
 
   .skillsSec {
-    grid-template-columns: repeat(2, 140px);
-    grid-template-rows: repeat(2, 180px);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 180px);
     justify-items: center;
     justify-content: space-around;
+    gap: 40px;
+    align-items: stretch;
+
+  }
+
+  .skillsImg{
+    display: none;
   }
 
   .skillsSec * {
@@ -465,10 +499,11 @@ body {
   }
 
   .projectsDiv {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
   }
 
-  .project2{
+  .project2 {
     margin-top: 0;
   }
 
@@ -476,9 +511,8 @@ body {
     bottom: 26px;
   }
 
-  .project4{
+  .project4 {
     bottom: 25px;
-
   }
 
   #contact {
@@ -498,11 +532,111 @@ body {
   }
 }
 
-@media (min-width: 576px) and (max-width:750px) {
+@media (min-width: 576px) and (max-width: 750px) {
   body p {
     font-size: x-small !important;
   }
 
+  .myName {
+    font-size: 6vw;
+    position: absolute;
+    top: 75px;
+    right: 4px;
+    font-family: "Chakra Petch", serif;
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 70%; /* Adjust to fit the length of your text (20ch = 20 characters) */
+    }
+  }
+
+  .pDisc{
+    bottom: 275px;
+    left: 240px;
+
+
+  }
+
+  .position {
+    bottom: 70px;
+    right: 43%;
+  }
+
+  .port {
+    top: 69%;
+    left: 15%;
+  }
+
+  .firstHalfEx {
+    justify-content: space-evenly;
+  }
+
+  
+
+  .skillsImg{
+    display: none;
+  }
+
+  .skillsFirst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+  }
+
+  .skillsSec {
+    display: grid;
+    grid-template-columns: repeat(2, 43%);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: end;
+    align-items: center;
+    
+    left: -1%;
+    position: relative;
+    justify-items: center;
+    justify-content: space-evenly;
+  }
+
+  .projectsDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  .projectsDiv {
+    flex-direction: column;
+  }
+
+  .project1P {
+    bottom: 20px;
+  }
+
+  .project2 {
+    margin-top: 0;
+  }
+
+  .project3 {
+    bottom: 26px;
+  }
+
+  .project4 {
+    bottom: 30px;
+  }
+
+  #contact img {
+    width: 320px;
+    left: 15%;
+    position: relative;
+    top: 20%;
+  }
+}
+
+@media (min-width: 752px) and (max-width: 1110px) {
   .myName {
     font-size: 6vw;
     position: absolute;
@@ -520,118 +654,40 @@ body {
     }
   }
 
-  
-
-  
-
-  .position {
-    bottom: 70px;
-    right: 43%;
+  #mainPic p{
+    font-size: medium;
   }
 
-  .port {
-    top: 80%;
-  }
-
-  .firstHalfEx {
-    justify-content: space-evenly;
-  }
-
-  .skillsFirst {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    justify-content: center;
-  }
-
-  .skillsSec {
-    display: grid
-;
-    grid-template-columns: repeat(2, 43%);
-    grid-template-rows: repeat(2, 1fr);
-    align-items: end;
-    align-items: center;
-    gap: 18px;
-    left: 2%;
-    position: relative;
-    justify-items: center;
-
-}
-
-  .projectsDiv {
-    flex-direction: column;
-  }
-
-  .project1P{
-    bottom: 20px;
+  .port{
+    left: 11%;
 
   }
 
-  .project2{
-    margin-top: 0;
-  }
-
-  .project3 {
-    bottom: 26px;
-  }
-
-  .project4{
-    bottom: 30px;
+  .position{
+    right: 82%;
 
   }
 
-  #contact img{
-    width: 320px;
-    left: 15%;
+  .pDisc{
+    left: 297px;
+  }
+
+  #contact img {
+    width: 410px;
+    left: 12%;
     position: relative;
     top: 20%;
-
-
   }
-}
 
-@media (min-width :752px) and (max-width:1110px)  {
-    
-    .myName {
-        font-size: 6vw;
-        position: absolute;
-        top: 110px;
-        right: 95px;
-        font-family: "Chakra Petch", serif;
-      }
+  .projectsDiv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 70%; /* Adjust to fit the length of your text (20ch = 20 characters) */
-        }
-      }
-    
-    
+    align-items: end;
+  }
 
-    #contact img{
-        width: 410px;
-        left: 12%;
-        position: relative;
-        top: 20%;
-    
-    
-      }
-
-      .projectsDiv{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        
-        align-items: end;
-
-
-      }
-
-      .projectsDiv div{
-        bottom: 0px;
+  .projectsDiv div {
+    bottom: 0px;
     position: relative;
-      }
+  }
 }
